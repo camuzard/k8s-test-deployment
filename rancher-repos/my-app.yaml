@@ -1,0 +1,19 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: app3t
+  namespace: fleet-default
+spec:
+  repo: https://github.com/camuzard/k8s-test-deployment
+  branch: master
+  targetNamespace: test
+  paths:
+  - fleet-mysql
+  - fleet-django
+  targets:
+  # - name: sportsbook
+  #   clusterSelector:
+  #     matchLabels:
+  #       product: sportsbook
+  - name: dev
+    clusterGroup: dev

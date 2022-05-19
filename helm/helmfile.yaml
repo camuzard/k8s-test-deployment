@@ -1,0 +1,23 @@
+---
+repositories:
+  - name: museum
+    url: http://test-chartmuseum.eks
+releases:
+  - name: mysql
+    namespace: test-lc-helm
+    chart: chartmuseum/mysql
+    #chart: mysql
+    labels:
+      stage: mysql
+  - name: django
+    namespace: test-lc-helm
+    chart: chartmuseum/django
+    #chart: django
+    labels:
+      stage: django
+  - name: varnish
+    namespace: test-lc-helm
+    chart: chartmuseum/varnish
+    #chart: varnish
+    labels:
+      stage: varnish

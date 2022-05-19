@@ -1,0 +1,21 @@
+namespace: test
+helm:
+  repo: "http://test-chartmuseum.eks"
+  releaseName: "test"
+  version: 0.1.0
+  chart: "mysql"
+# targetCustomizations:
+# - name: dev
+#   # clusterSelector:
+#   #   matchLabels:
+#   #     env: dev
+#   clusterGroup: dev
+#   kustomize:
+#     dir: kustomize/overlays/dev
+
+# - name: prod
+#   clusterSelector:
+#     matchLabels:
+#       env: prod
+#   kustomize:
+#     dir: kustomize/overlays/prod
